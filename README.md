@@ -36,52 +36,23 @@ Send a message to the AI and receive a response.
 **Request Body:**
 ```json
 {
-  "prompt": "Your message here"
+  "chat": "Your message here"
 }
 ```
 
 **Response:**
 ```json
 {
-  "response": {
-    "candidates": [
-      {
-        "content": {
-          "parts": [
-            {
-              "text": "AI response text here"
-            }
-          ],
-          "role": "model"
-        },
-        "finishReason": "STOP",
-        "index": 0
-      }
-    ],
-    "usageMetadata": {
-      "promptTokenCount": 7,
-      "candidatesTokenCount": 374,
-      "totalTokenCount": 1622,
-      "promptTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 7
-        }
-      ],
-      "thoughtsTokenCount": 1241
-    },
-    "modelVersion": "gemini-2.5-pro",
-    "responseId": "unique_response_id"
-  }
+  "response": "AI response text here"
 }
 ```
 
 **Error Responses:**
 
-400 Bad Request - Missing prompt:
+400 Bad Request - Missing chat:
 ```json
 {
-  "error": "Prompt is required"
+  "error": "Chat is required"
 }
 ```
 
